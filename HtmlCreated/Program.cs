@@ -19,7 +19,7 @@ namespace HtmlCreated
                     "</script>" +
                     "</head>");
                 sw.WriteLine("<TITLE>Hello World...</TITLE>");
-                sw.WriteLine("<BODY>");
+                sw.WriteLine("");
                 sw.WriteLine("<H1>Hello World !</H1>");
                 sw.WriteLine("<button onclick='pode()'>Adicionar</button>");
                 sw.WriteLine("</BODY>");
