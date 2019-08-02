@@ -29,6 +29,18 @@
     Private Sub ExcluirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExcluirToolStripMenuItem.Click
         Dim excluir As New Excluir
         excluir.MdiParent = Me ''Permite que o form filho seja aberto dentro do FORM MDI
-        excluir.Show() ''Chama o form Incluir, lembrar de declarar o form
+        excluir.Show() ''Chama o form Excluir, lembrar de declarar o form
+    End Sub
+
+    Private Sub AlterarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AlterarToolStripMenuItem.Click
+        Dim alterar As New Alterar
+        alterar.MdiParent = Me ''Permite que o form filho seja aberto dentro do FORM MDI
+        alterar.Show() ''Chama o form alterar, lembrar de declarar o form
+    End Sub
+
+    Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
+        Dim consultar As New Consultar
+        consultar.MdiParent = Me ''Permite que o form filho seja aberto dentro do FORM MDI
+        consultar.Show() ''Chama o form consultar, lembrar de declarar o form
     End Sub
 End Class
