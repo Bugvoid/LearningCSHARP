@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="W_liteKoll.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="W_liteKoll_br_com_lite_dotnet_service_WCreatedServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WB_liteKoll/WCreatedServiceService</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

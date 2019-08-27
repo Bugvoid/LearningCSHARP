@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://service.lite.com.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WCreatedServiceService" targetNamespace="http://service.lite.com.br/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WB_liteKoll/WCreatedServiceService?xsd=1" namespace="http://service.lite.com.br/" />
+    </xsd:schema>
+  </types>
+  <message name="getMinhaPrimeiraLista">
+    <part name="parameters" element="tns:getMinhaPrimeiraLista" />
+  </message>
+  <message name="getMinhaPrimeiraListaResponse">
+    <part name="parameters" element="tns:getMinhaPrimeiraListaResponse" />
+  </message>
+  <message name="getMeusCarro">
+    <part name="parameters" element="tns:getMeusCarro" />
+  </message>
+  <message name="getMeusCarroResponse">
+    <part name="parameters" element="tns:getMeusCarroResponse" />
+  </message>
+  <message name="ping">
+    <part name="parameters" element="tns:ping" />
+  </message>
+  <message name="pingResponse">
+    <part name="parameters" element="tns:pingResponse" />
+  </message>
+  <portType name="WCreatedService">
+    <operation name="getMinhaPrimeiraLista">
+      <input wsam:Action="http://service.lite.com.br/WCreatedService/getMinhaPrimeiraListaRequest" message="tns:getMinhaPrimeiraLista" />
+      <output wsam:Action="http://service.lite.com.br/WCreatedService/getMinhaPrimeiraListaResponse" message="tns:getMinhaPrimeiraListaResponse" />
+    </operation>
+    <operation name="getMeusCarro">
+      <input wsam:Action="http://service.lite.com.br/WCreatedService/getMeusCarroRequest" message="tns:getMeusCarro" />
+      <output wsam:Action="http://service.lite.com.br/WCreatedService/getMeusCarroResponse" message="tns:getMeusCarroResponse" />
+    </operation>
+    <operation name="ping">
+      <input wsam:Action="http://service.lite.com.br/WCreatedService/pingRequest" message="tns:ping" />
+      <output wsam:Action="http://service.lite.com.br/WCreatedService/pingResponse" message="tns:pingResponse" />
+    </operation>
+  </portType>
+  <binding name="WCreatedServicePortBinding" type="tns:WCreatedService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getMinhaPrimeiraLista">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getMeusCarro">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ping">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WCreatedServiceService">
+    <port name="WCreatedServicePort" binding="tns:WCreatedServicePortBinding">
+      <soap:address location="http://localhost:8080/WB_liteKoll/WCreatedServiceService" />
+    </port>
+  </service>
+</definitions>

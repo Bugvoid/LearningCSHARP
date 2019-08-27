@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://service.lite.com.br/" targetNamespace="http://service.lite.com.br/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="getMeusCarro" type="tns:getMeusCarro" />
+  <xs:element name="getMeusCarroResponse" type="tns:getMeusCarroResponse" />
+  <xs:element name="getMinhaPrimeiraLista" type="tns:getMinhaPrimeiraLista" />
+  <xs:element name="getMinhaPrimeiraListaResponse" type="tns:getMinhaPrimeiraListaResponse" />
+  <xs:element name="ping" type="tns:ping" />
+  <xs:element name="pingResponse" type="tns:pingResponse" />
+  <xs:complexType name="getMeusCarro">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getMeusCarroResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:carro" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="carro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nome" type="xs:string" />
+      <xs:element minOccurs="0" name="marca" type="xs:string" />
+      <xs:element minOccurs="0" name="cor" type="tns:corType" />
+      <xs:element minOccurs="0" name="erroXMLProfundo" type="tns:carro" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getMinhaPrimeiraLista">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getMinhaPrimeiraListaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ping">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nome" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="corType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AZUL" />
+      <xs:enumeration value="PRETO" />
+      <xs:enumeration value="BRANCO" />
+      <xs:enumeration value="VERMELHO" />
+      <xs:enumeration value="MARROM" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
